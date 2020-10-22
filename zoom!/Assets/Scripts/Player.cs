@@ -7,6 +7,10 @@ public class Player : MonoBehaviour
 
     [SerializeField] Camera cam;
     float currentTilt = 0f;
+    
+    
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +21,11 @@ public class Player : MonoBehaviour
     void Update()
     {
         cam.transform.localEulerAngles = new Vector3(currentTilt, 0, 0);
-        if (Input.GetButtonDown("Launch"))
-        {
-            this.transform.position += new Vector3(1, 1, 0);
-        }
+
+        
+        
     }
+
+    
+    
 }
