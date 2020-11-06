@@ -8,7 +8,7 @@ public class FlightPhysics : MonoBehaviour
 
     float lift = 600f;
     float flightPower = 1000f;// force that is applied on launch of player into sky
-    float thrust = 0f; // force that is applied in flight, normally the result of powered flight, ie a jetpack or a bird's wings flapping
+    public float thrust = 0f; // force that is applied in flight, normally the result of powered flight, ie a jetpack or a bird's wings flapping
     float speed = 5f;
     float density = 30f;
     float airDensity = 1.25f;
@@ -44,6 +44,12 @@ public class FlightPhysics : MonoBehaviour
     void FlightPath()
     {
         
+    }
+
+    public void inFlightBoost()
+    {
+        rb.AddForce(Vector2.up * thrust);
+        thrust = 0;
     }
 
     // for the following formulas/functions, i used this stack overflow page to find the formulas for lift, lift coefficient, and drag https://stackoverflow.com/questions/49716989/unity-aircraft-physics

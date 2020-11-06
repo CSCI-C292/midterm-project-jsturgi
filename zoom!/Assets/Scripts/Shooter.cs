@@ -19,7 +19,7 @@ public class Shooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Launch") && ammoCount > 0 && player.inFlight)
+        if (Input.GetButtonDown("Shoot") && ammoCount > 0 && player.inFlight)
         {
             Debug.Log("Shot");
             ammoCount--;
